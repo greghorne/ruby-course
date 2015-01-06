@@ -1,0 +1,53 @@
+
+
+
+
+Searching 2336 files for "imageU"
+
+/Users/greghorne/code/mks/student-dev-box/pet-shop-server/server.rb:
+  105    username: 'alice',
+  106    cats: [
+  107:     { shopId: 1, name: "NaN Cat", imageurl: "http://i.imgur.com/TOEskNX.jpg", adopted: true, id: 44 },
+  108:     { shopId: 8, name: "Meowzer", imageurl: "http://www.randomkittengenerator.com/images/cats/rotator.php", id: 8, adopted: "true" }
+  109    ],
+  110    dogs: [
+  111:     { shopId: 1, name: "Leaf Pup", imageurl: "http://i.imgur.com/kuSHji2.jpg", happiness: 2, id: 2, adopted: "true" }
+  112    ]
+  113  }
+
+/Users/greghorne/code/mks/student-dev-box/pet-shop-server/lib/pet-shop-server.rb:
+  122        parsed_cats = JSON.parse(cats)
+  123  
+  124:       parsed_dogs.each {|x| insert_dog(x["name"], x["imageurl"], x["happiness"], x["id"], x["shopId"], x["adopted"])}
+  125:       parsed_cats.each {|x| insert_cat(x["name"], x["imageurl"], x["id"], x["shopId"], x["adopted"])}
+  126  
+  127        i += 1
+
+/Users/greghorne/code/mks/student-dev-box/pet-shop-server/public/js/pet-container.js:
+   34        return m('.pet', [
+   35          m('.photo',
+   36:           m('img', { src: pet.imageurl })
+   37          ),
+   38          m('.info', [
+
+/Users/greghorne/code/mks/student-dev-box/pet-shop-server/public/js/pet-shop.js:
+   50        return m('.pet', [
+   51          m('.photo',
+   52:           m('img', { src: pet.imageurl })
+   53          ),
+   54          m('.info', [
+
+/Users/greghorne/code/mks/student-dev-box/pet_shop.rb:
+   14          "shopId": 1,
+   15          "name": "Scaredy Cat",
+   16:         "imageurl": "http://i.imgur.com/TOEskNX.jpg",
+   17          "adopted": true,
+   18          "id": 1
+   ..
+   24          "shopId": 1,
+   25          "name": "Lazy Eater",
+   26:         "imageurl": "http://i.imgur.com/vCuyjsS.gif",
+   27          "happiness": 5,
+   28          "id": 1,
+
+9 matches across 5 files

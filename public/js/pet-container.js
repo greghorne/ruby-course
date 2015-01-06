@@ -33,7 +33,7 @@
     var petDivs = pets.map(function(pet) {
       return m('.pet', [
         m('.photo',
-          m('img', { src: pet.imageUrl })
+          m('img', { src: pet.imageurl })
         ),
         m('.info', [
           m('h4', pet.name)
